@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_security_acl_role">
+    <sys_security_acl_role action="DELETE">
+        <sys_class_name>sys_security_acl_role</sys_class_name>
+        <sys_created_by>nabil.enayet@nuvolo.com</sys_created_by>
+        <sys_created_on>2020-06-02 03:35:39</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>7a6e885f1b09d450bf9a542d1e4bcbbd</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>x_nuvo_deye_probe_type.x_nuvo_deye.admin</sys_name>
+        <sys_package display_value="Deyessect" source="x_nuvo_deye">af843bcb1b85d450bf9a542d1e4bcbd8</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Deyessect">af843bcb1b85d450bf9a542d1e4bcbd8</sys_scope>
+        <sys_security_acl display_value="x_nuvo_deye_probe_type">366e885f1b09d450bf9a542d1e4bcbba</sys_security_acl>
+        <sys_update_name>sys_security_acl_role_7a6e885f1b09d450bf9a542d1e4bcbbd</sys_update_name>
+        <sys_updated_by>nabil.enayet@nuvolo.com</sys_updated_by>
+        <sys_updated_on>2020-06-02 03:36:05</sys_updated_on>
+        <sys_user_role display_value="x_nuvo_deye.admin" name="x_nuvo_deye.admin">dea4fbcf1b85d450bf9a542d1e4bcbd9</sys_user_role>
+        <transaction_id/>
+    </sys_security_acl_role>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Deyessect">af843bcb1b85d450bf9a542d1e4bcbd8</application>
+        <file_path/>
+        <instance_id>45de6f824f7c9200401199701310c712</instance_id>
+        <instance_name>ven01540</instance_name>
+        <name>sys_security_acl_role_7a6e885f1b09d450bf9a542d1e4bcbbd</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_security_acl_role"><sys_security_acl_role action="INSERT_OR_UPDATE"><sys_class_name>sys_security_acl_role</sys_class_name><sys_created_by>nabil.enayet@nuvolo.com</sys_created_by><sys_created_on>2020-06-02 03:35:39</sys_created_on><sys_customer_update>false</sys_customer_update><sys_id>7a6e885f1b09d450bf9a542d1e4bcbbd</sys_id><sys_mod_count>1</sys_mod_count><sys_name>x_nuvo_deye_probe_type.x_nuvo_deye.admin</sys_name><sys_package display_value="Deyessect" source="x_nuvo_deye">af843bcb1b85d450bf9a542d1e4bcbd8</sys_package><sys_policy/><sys_replace_on_upgrade>false</sys_replace_on_upgrade><sys_scope display_value="Deyessect">af843bcb1b85d450bf9a542d1e4bcbd8</sys_scope><sys_security_acl display_value="x_nuvo_deye_probe_type">366e885f1b09d450bf9a542d1e4bcbba</sys_security_acl><sys_update_name>sys_security_acl_role_7a6e885f1b09d450bf9a542d1e4bcbbd</sys_update_name><sys_updated_by>nabil.enayet@nuvolo.com</sys_updated_by><sys_updated_on>2020-06-02 03:36:05</sys_updated_on><sys_user_role display_value="x_nuvo_deye.admin" name="x_nuvo_deye.admin">dea4fbcf1b85d450bf9a542d1e4bcbd9</sys_user_role><transaction_id/></sys_security_acl_role></record_update>]]></payload>
+        <payload_hash>-1204333639</payload_hash>
+        <record_name>x_nuvo_deye_probe_type.x_nuvo_deye.admin</record_name>
+        <reverted_from/>
+        <source>23843bcb1b85d450bf9a542d1e4bcbdb</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>nabil.enayet@nuvolo.com</sys_created_by>
+        <sys_created_on>2020-06-02 03:36:05</sys_created_on>
+        <sys_id>418e4c5f1b09d450bf9a542d1e4bcb4d</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>1727319b8b30000001</sys_recorded_at>
+        <sys_updated_by>nabil.enayet@nuvolo.com</sys_updated_by>
+        <sys_updated_on>2020-06-02 03:36:05</sys_updated_on>
+        <type>Access Roles</type>
+        <update_guid>098e4c5f8a09d450ac148b92444c514c</update_guid>
+        <update_guid_history>098e4c5f8a09d450ac148b92444c514c:-1204333639,7a6e885f8209d450a69a509c4ffd6ebf:-514981067</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="Record deleted 2020-06-01 23:55:43">b00354171b49d450bf9a542d1e4bcb3f</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>nabil.enayet@nuvolo.com</sys_created_by>
+        <sys_created_on>2020-06-02 03:55:43</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_db_object display_value="" name="sys_security_acl_role">sys_security_acl_role</sys_db_object>
+        <sys_id>a81fc35fe4494bca9a658cdcba978699</sys_id>
+        <sys_metadata>7a6e885f1b09d450bf9a542d1e4bcbbd</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x_nuvo_deye_probe_type.x_nuvo_deye.admin</sys_name>
+        <sys_package display_value="Deyessect" source="x_nuvo_deye">af843bcb1b85d450bf9a542d1e4bcbd8</sys_package>
+        <sys_parent display_value="">366e885f1b09d450bf9a542d1e4bcbba</sys_parent>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Deyessect">af843bcb1b85d450bf9a542d1e4bcbd8</sys_scope>
+        <sys_scope_delete display_value="">0f7d1cc7766c4c5aa26534c6b4882c29</sys_scope_delete>
+        <sys_update_name>sys_security_acl_role_7a6e885f1b09d450bf9a542d1e4bcbbd</sys_update_name>
+        <sys_update_version display_value="sys_security_acl_role_7a6e885f1b09d450bf9a542d1e4bcbbd">418e4c5f1b09d450bf9a542d1e4bcb4d</sys_update_version>
+        <sys_updated_by>nabil.enayet@nuvolo.com</sys_updated_by>
+        <sys_updated_on>2020-06-02 03:55:43</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

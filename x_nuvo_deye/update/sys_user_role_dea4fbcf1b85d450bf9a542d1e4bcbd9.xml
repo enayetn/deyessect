@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_user_role">
+    <sys_user_role action="INSERT_OR_UPDATE">
+        <assignable_by/>
+        <can_delegate>true</can_delegate>
+        <description/>
+        <elevated_privilege>false</elevated_privilege>
+        <encryption_context/>
+        <grantable>true</grantable>
+        <includes_roles/>
+        <name>x_nuvo_deye.admin</name>
+        <requires_subscription>-1</requires_subscription>
+        <scoped_admin>false</scoped_admin>
+        <suffix>x_nuvo_deye.admin</suffix>
+        <sys_class_name>sys_user_role</sys_class_name>
+        <sys_created_by>nabil.enayet@nuvolo.com</sys_created_by>
+        <sys_created_on>2020-06-02 01:43:07</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>dea4fbcf1b85d450bf9a542d1e4bcbd9</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x_nuvo_deye.admin</sys_name>
+        <sys_package display_value="Deyessect" source="x_nuvo_deye">af843bcb1b85d450bf9a542d1e4bcbd8</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Deyessect">af843bcb1b85d450bf9a542d1e4bcbd8</sys_scope>
+        <sys_update_name>sys_user_role_dea4fbcf1b85d450bf9a542d1e4bcbd9</sys_update_name>
+        <sys_updated_by>nabil.enayet@nuvolo.com</sys_updated_by>
+        <sys_updated_on>2020-06-02 01:43:07</sys_updated_on>
+    </sys_user_role>
+</record_update>

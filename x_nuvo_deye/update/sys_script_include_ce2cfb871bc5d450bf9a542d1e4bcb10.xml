@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>package_private</access>
+        <active>true</active>
+        <api_name>x_nuvo_deye.probe</api_name>
+        <caller_access/>
+        <client_callable>false</client_callable>
+        <description/>
+        <name>probe</name>
+        <script><![CDATA[var probe = Class.create();
+probe.prototype = {
+    initialize: function() {
+		this.tables = {
+			file: "x_nuvo_introspect_ci_app_file",
+		};
+		
+		this.relationships = {
+			uses: {
+				type: "6afd799338a02000c18673032c71b87b",
+				searchfrom: "parent"
+			},
+			usedby: {
+				type: "cb5592603751200032ff8c00dfbe5d17",
+				searchfrom: "child"
+			}
+		};
+
+		this.class_metadata = {
+			"sys_script_include": {
+				nickname: "SI",
+				dependencies: [
+					{
+						table: "sys_script_include",
+						field: "script",
+						depnamefield: "name",
+						relconfig: "usedby",
+						reltype: "6afd799338a02000c18673032c71b87b" /* USED BY */
+					}
+					// BR, REST, ...
+				]
+			},
+			"sys_db_object": {
+				nickname: "TBL",
+				dependencies: [
+					{
+						table: "sys_script_include",
+						field: "script",
+						depnamefield: "name",
+						relconfig: "usedby",
+						reltype: "6afd799338a02000c18673032c71b87b" /* USED BY */
+					},
+					{
+						table: "sys_db_object",
+						field: "super_class",
+						depnamefield: "name",
+						relconfig: "uses",
+						reltype: "cb5592603751200032ff8c00dfbe5d17" /* USES */
+					}
+				]
+			}
+		};
+	},
+	
+	RELTABLE: 'cmdb_rel_ci',
+	FILETABLE: 'sys_metadata',
+	
+	log: function log() {
+		var message = [];
+		for (var arg in arguments) {
+			message.push(arguments[arg]);
+		}
+		gs.info(message.join(" "));
+	},
+
+	scan: function scan(app) {
+		var files = new GlideRecord(this.FILETABLE);
+		
+		files.addQuery("sys_scope", app || "c23545ae4f954a00b794a88ca310c798");
+		files.addEncodedQuery("sys_class_name=sys_db_object^ORsys_class_name=sys_script_include");
+
+		files.query();
+
+		while (files.next()) {
+			this.process(files);
+		}
+	},
+
+	process: function process(file) {
+
+		var fileclass = file.getValue("sys_class_name");
+		
+		// Fetch ci file for metadata file
+		var cifile = this._getCIFile(file);
+
+		var probe_config = this.class_metadata[fileclass];
+		
+		var appfile = new GlideRecord(fileclass);
+		appfile.get(file.getUniqueValue());
+		
+		this._exploreDependencies(appfile, cifile, probe_config);
+
+	},
+	
+	_exploreDependencies: function _exploreDependencies(child, parent, probe_config) {
+		var self = this;
+		
+		var relmap = {
+			child: child,
+			parent: parent
+		};
+		
+		probe_config.dependencies.forEach(function(dep) {
+			var relconfig = self.relationships[dep.relconfig];
+			gs.info(JSON.stringify(relconfig));
+			var searchobj = relmap[relconfig.searchfrom];
+			
+			/* TODO: 
+				- Exact match (avoid matching the MS scripts)
+				- Intelligent code analysis to figure out true usage
+			*/
+			var depFile = new GlideRecord(dep.table);
+			depFile.addEncodedQuery(dep.field + "LIKE" + searchobj.getValue(dep.depnamefield));
+			depFile.query();
+			
+			if (depFile.getRowCount()==0) return;
+			
+			var deps = 0;
+			while (depFile.next()) {
+				deps++;
+				//var parent = cifile;
+				var cichild = self._getCIFile(depFile);
+				var rel = relconfig.type;
+				self._createCIRelationship(parent, cichild, rel);
+			}
+			parent.setValue("dependency_count", deps);
+			parent.update();
+		});
+	},
+	
+	_createCIRelationship: function _createCIRelationship(parent, child, relationship_type) {
+		var rel = new GlideRecord(this.RELTABLE);
+		rel.addQuery("parent", parent.getUniqueValue());
+		rel.addQuery("child", child.getUniqueValue());
+		rel.addQuery("type", relationship_type);
+		rel.query();
+		if (rel.hasNext()) return;
+		
+		rel.initialize();
+		rel.setValue("parent", parent.getUniqueValue());
+		rel.setValue("child", child.getUniqueValue());
+		rel.setValue("type", relationship_type);
+		rel.insert();
+	},
+
+	_getCIFile: function _getCIFile(file) {
+		// Create entry in CI Files if not exists
+		var cifile = new GlideRecord(this.tables.file);
+		var exists = cifile.get("file", file.getUniqueValue());
+		if (exists) return cifile;
+
+		cifile.initialize();
+		var fileName = this.class_metadata[file.getValue("sys_class_name")].nickname + " " + file.getValue("sys_name");
+		cifile.setValue("name", fileName);
+		cifile.setValue("file", file.getUniqueValue());
+		var inserted = cifile.insert();
+
+		return cifile;
+	},
+
+	type: 'probe'
+};]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>nabil.enayet@nuvolo.com</sys_created_by>
+        <sys_created_on>2020-06-02 20:22:54</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>ce2cfb871bc5d450bf9a542d1e4bcb10</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>probe</sys_name>
+        <sys_package display_value="Deyessect" source="x_nuvo_deye">af843bcb1b85d450bf9a542d1e4bcbd8</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Deyessect">af843bcb1b85d450bf9a542d1e4bcbd8</sys_scope>
+        <sys_update_name>sys_script_include_ce2cfb871bc5d450bf9a542d1e4bcb10</sys_update_name>
+        <sys_updated_by>nabil.enayet@nuvolo.com</sys_updated_by>
+        <sys_updated_on>2020-06-02 20:22:54</sys_updated_on>
+    </sys_script_include>
+</record_update>

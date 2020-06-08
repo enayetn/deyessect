@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_documentation element="" label="Probe Relationships" language="en" table="x_nuvo_deye_probe_relationships">
+        <sys_documentation action="INSERT_OR_UPDATE">
+            <element/>
+            <help/>
+            <hint/>
+            <label>Probe Relationships</label>
+            <language>en</language>
+            <name>x_nuvo_deye_probe_relationships</name>
+            <plural>Probe Relationships</plural>
+            <sys_class_name>sys_documentation</sys_class_name>
+            <sys_created_by>nabil.enayet@nuvolo.com</sys_created_by>
+            <sys_created_on>2020-06-02 03:40:10</sys_created_on>
+            <sys_customer_update>false</sys_customer_update>
+            <sys_id>097f40df1b09d450bf9a542d1e4bcb60</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>Probe Relationships</sys_name>
+            <sys_package display_value="Deyessect" source="x_nuvo_deye">af843bcb1b85d450bf9a542d1e4bcbd8</sys_package>
+            <sys_policy/>
+            <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+            <sys_scope display_value="Deyessect">af843bcb1b85d450bf9a542d1e4bcbd8</sys_scope>
+            <sys_update_name>sys_documentation_x_nuvo_deye_probe_relationships__en</sys_update_name>
+            <sys_updated_by>nabil.enayet@nuvolo.com</sys_updated_by>
+            <sys_updated_on>2020-06-02 03:40:10</sys_updated_on>
+            <url/>
+            <url_target/>
+        </sys_documentation>
+    </sys_documentation>
+</record_update>

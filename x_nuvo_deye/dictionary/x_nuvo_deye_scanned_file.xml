@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element label="Scanned File" max_length="40" name="x_nuvo_deye_scanned_file" sizeclass="0" type="collection">
+        <element label="Class" max_length="40" name="class" type="sys_class_name"/>
+        <element label="Dependency Count" max_length="40" name="dependency_count" type="integer"/>
+        <element label="File" max_length="32" name="file" reference="sys_metadata" type="reference"/>
+        <element label="Scan" max_length="32" name="scan" reference="x_nuvo_deye_scan" type="reference"/>
+        <index name="index">
+            <element name="file"/>
+        </index>
+        <index name="index2">
+            <element name="scan"/>
+        </index>
+        <index name="index3">
+            <element name="class"/>
+        </index>
+    </element>
+</database>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element attributes="update_synch=true" extends="sys_metadata" label="Probe Relationships" max_length="40" name="x_nuvo_deye_probe_relationships" sizeclass="0" type="collection">
+        <element label="Dependency Key" max_length="80" name="dependency_key" type="field_name"/>
+        <element label="Field" max_length="80" name="field" type="field_name"/>
+        <element label="Relationship Type" max_length="32" name="relationship_type" reference="cmdb_rel_type" type="reference"/>
+        <element label="Table" max_length="80" name="table" type="table_name"/>
+        <index name="index">
+            <element name="relationship_type"/>
+        </index>
+    </element>
+</database>

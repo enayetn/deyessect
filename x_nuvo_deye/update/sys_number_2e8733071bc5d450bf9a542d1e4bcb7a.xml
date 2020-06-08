@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_number">
+    <sys_number action="INSERT_OR_UPDATE">
+        <category display_value="" name="x_nuvo_deye_scan">x_nuvo_deye_scan</category>
+        <maximum_digits>7</maximum_digits>
+        <number>1000</number>
+        <prefix>SCN</prefix>
+        <sys_class_name>sys_number</sys_class_name>
+        <sys_created_by>nabil.enayet@nuvolo.com</sys_created_by>
+        <sys_created_on>2020-06-02 01:55:41</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>2e8733071bc5d450bf9a542d1e4bcb7a</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>SCN</sys_name>
+        <sys_package display_value="Deyessect" source="x_nuvo_deye">af843bcb1b85d450bf9a542d1e4bcbd8</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Deyessect">af843bcb1b85d450bf9a542d1e4bcbd8</sys_scope>
+        <sys_update_name>sys_number_2e8733071bc5d450bf9a542d1e4bcb7a</sys_update_name>
+        <sys_updated_by>nabil.enayet@nuvolo.com</sys_updated_by>
+        <sys_updated_on>2020-06-02 01:55:41</sys_updated_on>
+    </sys_number>
+</record_update>
